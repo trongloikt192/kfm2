@@ -13,5 +13,10 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('f01');
+});
+
+Route::get('/f02', function()
+{
+	return View::make('f02');
 });
