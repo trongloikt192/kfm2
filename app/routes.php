@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/f01', function()
 {
 	return View::make('f01');
 });
@@ -20,3 +20,65 @@ Route::get('/f02', function()
 {
 	return View::make('f02');
 });
+
+Route::get('/f03', function()
+{
+	return View::make('f03');
+});
+
+Route::get('/f04', function()
+{
+	return View::make('f04');
+});
+
+Route::get('/f05', function()
+{
+	return View::make('f05');
+});
+
+Route::get('/f06', function()
+{
+	return View::make('f06');
+});
+
+// Admin Control Panel
+Route::get('/admincp/b01', function()
+{
+	return View::make('b01');
+});
+
+Route::get('/admincp/b02', function()
+{
+	return View::make('b02');
+});
+
+Route::get('/admincp/b03', function()
+{
+	return View::make('b03');
+});
+
+Route::get('/admincp/b04', function()
+{
+	return View::make('b04');
+});
+
+Route::get('/admincp/b05', function()
+{
+	return View::make('b05');
+});
+
+Route::get('/admincp/b06', function()
+{
+	return View::make('b06');
+});
+
+Route::get('/admincp/b07', function()
+{
+	return View::make('b07');
+});
+
+Route::get('/admincp/b08', function()
+{
+	return View::make('b08');
+});
+
