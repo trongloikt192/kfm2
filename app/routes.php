@@ -44,41 +44,45 @@ Route::get('/f06', function()
 // Admin Control Panel
 Route::get('/admincp/b01', function()
 {
-	return View::make('b01');
+	return View::make('admincp.b01');
 });
 
 Route::get('/admincp/b02', function()
 {
-	return View::make('b02');
+	return View::make('admincp.b02');
 });
 
 Route::get('/admincp/b03', function()
 {
-	return View::make('b03');
+	return View::make('admincp.b03');
 });
 
 Route::get('/admincp/b04', function()
 {
-	return View::make('b04');
+	return View::make('admincp.b04');
 });
 
 Route::get('/admincp/b05', function()
 {
-	return View::make('b05');
+	return View::make('admincp.b05');
 });
 
 Route::get('/admincp/b06', function()
 {
-	return View::make('b06');
+	return View::make('admincp.b06');
 });
 
 Route::get('/admincp/b07', function()
 {
-	return View::make('b07');
+	return View::make('admincp.b07');
 });
 
 Route::get('/admincp/b08', function()
 {
-	return View::make('b08');
+	return View::make('admincp.b08');
 });
 
+Route::get('/admincp/b10', function()
+{
+	return View::make('admincp.b10');
+});

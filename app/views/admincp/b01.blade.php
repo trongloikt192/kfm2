@@ -1,0 +1,1 @@
+@extends('admincp.layouts_admincp.master')

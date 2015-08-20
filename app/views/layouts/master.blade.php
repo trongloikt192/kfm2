@@ -10,8 +10,8 @@
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
 
-    {{ HTML::style('//bootswatch.com/simplex/bootstrap.min.css') }}
-    {{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') }}
+    {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/simplex/bootstrap.min.css') }}
+    {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css') }}
 
     
     @yield('header-js')
@@ -54,8 +54,8 @@
         </div>
     </div>
 
-    {{ HTML::script('//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js') }}
-    {{ HTML::script('js/bootstrap.min.js') }}
+    {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js') }}
+    {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js') }}
     {{ HTML::script('js/jssor.js') }}
     {{ HTML::script('js/jssor.slider.js') }}
     {{ HTML::script('js/scripts.js') }}
