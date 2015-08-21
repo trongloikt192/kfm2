@@ -1,86 +1,24 @@
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">
-			Đăng nhập
-		</h3>
-	</div>
-	<div class="panel-body">
-		<form>
-			<p class="loading"></p>
-			<div class="input-group">
-				<span class="input-group-addon"><i class="fa fa-user"></i></span>
-				<input type="text" class="form-control" name="email_or_username" placeholder="Email or Username">
-			</div>
-			<span class="help-block"></span>
-								
-			<div class="input-group">
-				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-				<input  type="password" class="form-control" name="password" placeholder="Password">
-			</div>
-            <span class="help-block">Password error</span>
-
-			<div style="form-group">
-				<div>
-					<label><input type="checkbox" /> Remember me</label>
-					<a href="{{ URL::to('password/remind') }}" class="pull-right">Forgot password?</a>
-				</div>
-				
-				<button type="submit" class="btn btn-md btn-primary">Đăng nhập</button>
-
-				<a type="button" href="{{ URL::to('sign-up') }}" class="btn btn-md btn-default pull-right">Đăng ký</a>
-
-			</div>
-		</form>
-		
-	</div>
-</div>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">
-			Tin mới cập nhật
-		</h3>
-	</div>
-	<div class="panel-body">
-		<div class="media">
-		  	<div class="media-left">
-		    	<a href="#">
-		      		<img class="media-object" src="http://lorempixel.com/90/70/" alt="...">
-		    	</a>
-		  	</div>
-		  	<div class="media-body">
-		    	<h4 class="media-heading">Media heading</h4>
-		    	Công ty A&C nhận bằng khen của Liên đoàn lao động Quận Tân Bình
-		  	</div>
-		</div>
-		<hr>
-
-		<div class="media">
-		  	<div class="media-left">
-		    	<a href="#">
-		      		<img class="media-object" src="http://lorempixel.com/90/70/" alt="...">
-		    	</a>
-		  	</div>
-		  	<div class="media-body">
-		    	<h4 class="media-heading">Media heading</h4>
-		    	Công ty A&C nhận bằng khen của Liên đoàn lao động Quận Tân Bình
-		  	</div>
-		</div>
-		<hr>
-	</div>
-</div>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">
-			Liên kết
-		</h3>
-	</div>
-	<div class="panel-body">
-		<select class="form-control input-sm">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-	</div>
-</div>
+<div id="sidebar">
+    <div class="search">
+        <input type="search" placeholder="Search here...">
+        <i class="fa fa-search"></i>
+    </div>
+    <ul class="main-nav">
+        <li class="active">
+            <a href="#" onclick="return false;"><i class="fa fa-home"></i> Trang chủ</a>
+        </li>
+        <li class="collapsible">
+            <a href="#" onclick="return false;"><i class="fa fa-list"></i> User</a>
+            <ul class="sub-menu">
+                <li><a href="b09"><i class="fa fa-pencil"></i>Phân quyền</a></li>
+                <li><a href="b01"><i class="fa fa-tags"></i>Người dùng</a></li>
+            </ul>
+        </li>
+        <li><a href="b02"><i class="fa fa-star"></i> Menu &amp; Danh mục</a></li>
+        <li><a href="b03"><i class="fa fa-arrows-h"></i> Bài viết</a></li>
+        <li><a href="b06"><i class="fa fa-arrows-h"></i> Khách hàng</a></li>
+        <li><a href="b07"><i class="fa fa-arrows-h"></i> Hỏi đáp</a></li>
+        <li><a href="b08"><i class="fa fa-arrows-h"></i> Liên hệ</a></li>
+        <li><a href="b04"><i class="fa fa-bar-chart-o"></i> Liên kết</a></li>
+    </ul>
+</div> <!-- /sidebar -->

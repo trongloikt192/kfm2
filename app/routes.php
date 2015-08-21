@@ -82,6 +82,11 @@ Route::get('/admincp/b08', function()
 	return View::make('admincp.b08');
 });
 
+Route::get('/admincp/b09', function()
+{
+	return View::make('admincp.b09');
+});
+
 Route::get('/admincp/b10', function()
 {
 	return View::make('admincp.b10');
