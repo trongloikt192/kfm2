@@ -41,53 +41,71 @@ Route::get('/f06', function()
 	return View::make('f06');
 });
 
+
 // Admin Control Panel
-Route::get('/admincp/b01', function()
-{
-	return View::make('admincp.b01');
+Route::group(['prefix' => 'admincp'], function () {
+    Route::get('b01', function ()    {
+        return View::make('admincp.b01');
+    });
+
+	Route::get('b02', function()
+	{
+		return View::make('admincp.b02');
+	});
+
+	Route::get('b03', function()
+	{
+		return View::make('admincp.b03');
+	});
+
+	Route::get('b04', function()
+	{
+		return View::make('admincp.b04');
+	});
+
+	Route::get('b05', function()
+	{
+		return View::make('admincp.b05');
+	});
+
+	Route::get('b06', function()
+	{
+		return View::make('admincp.b06');
+	});
+
+	Route::get('b07', function()
+	{
+		return View::make('admincp.b07');
+	});
+
+	Route::get('b08', function()
+	{
+		return View::make('admincp.b08');
+	});
+
+	Route::get('b09', function()
+	{
+		return View::make('admincp.b09');
+	});
+
+	Route::resource('b10', 'LinksController');
+
+	Route::get('b11', function()
+	{
+		return View::make('admincp.b11');
+	});
+
+	
+
+	// Api
+	Route::group(['prefix' => 'api'], function () {
+
+		Route::get('b1001', function()
+		{
+			return View::make('admincp.b11');
+		});
+
+		// Route::resource('b10', 'LinksController');
+	});
 });
 
-Route::get('/admincp/b02', function()
-{
-	return View::make('admincp.b02');
-});
-
-Route::get('/admincp/b03', function()
-{
-	return View::make('admincp.b03');
-});
-
-Route::get('/admincp/b04', function()
-{
-	return View::make('admincp.b04');
-});
-
-Route::get('/admincp/b05', function()
-{
-	return View::make('admincp.b05');
-});
-
-Route::get('/admincp/b06', function()
-{
-	return View::make('admincp.b06');
-});
-
-Route::get('/admincp/b07', function()
-{
-	return View::make('admincp.b07');
-});
-
-Route::get('/admincp/b08', function()
-{
-	return View::make('admincp.b08');
-});
-
-Route::get('/admincp/b09', function()
-{
-	return View::make('admincp.b09');
-});
-
-Route::get('/admincp/b10', function()
-{
-	return View::make('admincp.b10');
-});

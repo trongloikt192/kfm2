@@ -2397,5 +2397,29 @@ a [class^="fa-"], a [class*=" fa-"] {
   100% { transform: translateY(0px); }
 }
 
+/*//////////////////////////////////////////// ME ///////////////////////////////// */
+#datatable tbody tr:hover {
+	cursor: pointer;
+	background-color: #59ABC3;
+	color: #ffffff
+}
 
+/*#datatable > tbody > tr {border: 1px solid #cccccc !important;}*/
+.modal-header {
+    min-height: 16.43px;
+    padding: 5px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #3E3E3E;
+    color: #ffffff;
+}
 
+.modal-footer {
+    padding: 5px 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+    background-color: #EFEFEF;
+}
+
+.modal-header > button.close {
+    color: #FFFFFF;
+}

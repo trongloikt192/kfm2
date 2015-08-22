@@ -1,7 +1,7 @@
 <div id="top">
                 
     <div class="main-logo">
-        <a href="#" onclick="return false;"><img src="{{asset('img/logo.png')}}"></a>
+        <a href="{{ URL::to('f01') }}" target="_blank"><img src="{{asset('img/logo.png')}}"></a>
     </div>
     
     <div class="m-nav"><i class="fa fa-bars"></i></div>
@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li>
-                <a href="login.html">
+                <a href="b01">
                     <i class="fa fa-times-circle"></i> Logout
                 </a>
             </li>

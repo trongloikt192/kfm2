@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-primary">
 	<div class="panel-heading">
 		<h3 class="panel-title">
 			Đăng nhập
@@ -22,19 +22,19 @@
 			<div style="form-group">
 				<div>
 					<label><input type="checkbox" /> Remember me</label>
-					<a href="{{ URL::to('password/remind') }}" class="pull-right">Forgot password?</a>
+					<a href="{{ URL::to('f03') }}" class="pull-right">Forgot password?</a>
 				</div>
 				
 				<button type="submit" class="btn btn-md btn-primary">Đăng nhập</button>
 
-				<a type="button" href="{{ URL::to('sign-up') }}" class="btn btn-md btn-default pull-right">Đăng ký</a>
+				<a type="button" href="{{ URL::to('f04') }}" class="btn btn-md btn-default pull-right">Đăng ký</a>
 
 			</div>
 		</form>
 		
 	</div>
 </div>
-<div class="panel panel-default">
+<div class="panel panel-primary">
 	<div class="panel-heading">
 		<h3 class="panel-title">
 			Tin mới cập nhật
@@ -68,7 +68,7 @@
 		<hr>
 	</div>
 </div>
-<div class="panel panel-default">
+<div class="panel panel-primary">
 	<div class="panel-heading">
 		<h3 class="panel-title">
 			Liên kết
