@@ -16,20 +16,18 @@
             <li>
                 <a href="#">Sản phẩm & Dịch Vụ</a>
             </li>
-            <li>
-                <a href="#">Hỗ Trợ Khách Hàng</a>
-            </li>
+            
             <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Văn Bản Pháp Quy<strong class="caret"></strong></a>
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hỗ Trợ Khách Hàng <strong class="caret"></strong></a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="#">Action</a>
+                        <a href="#">Các câu hỏi thường gặp</a>
                     </li>
                     <li>
-                        <a href="#">Another action</a>
+                        <a href="#">Đặt câu hỏi</a>
                     </li>
                     <li>
-                        <a href="#">Something else here</a>
+                        <a href="#">Văn phòng và chi nhánh</a>
                     </li>
                     <li class="divider">
                     </li>
@@ -44,6 +42,9 @@
                 </ul>
             </li>
             <li>
+                <a href="#">Văn Bản Pháp Quy</a>
+            </li>
+            <li>
                 <a href="#">Tin Tức & Hoạt Động</a>
             </li>
             <li>
@@ -51,11 +52,11 @@
             </li>
         </ul>
 
-        <form class="navbar-form navbar-right" role="search">
+        {{-- <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
                 <input class="form-control input-sm" type="text" placeHolder="Tìm kiếm" />
             </div>
-        </form>
+        </form> --}}
     </div>
     
 </nav>

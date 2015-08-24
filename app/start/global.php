@@ -79,3 +79,16 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+
+/*
+|--------------------------------------------------------------------------
+| LaraBase
+|--------------------------------------------------------------------------
+*/
+
+require app_path().'/LaraBase/helpers.php';
+require app_path().'/LaraBase/events.php';
+require app_path().'/LaraBase/macros_form.php';
+require app_path().'/LaraBase/macros_html.php';
+require app_path().'/LaraBase/timezones.php';

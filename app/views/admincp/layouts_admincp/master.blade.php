@@ -20,10 +20,10 @@
         {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css') }}
         {{-- {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css') }} --}}
         {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css') }}
-        {{-- {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.css') }} --}}
+        {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.css') }}
 
         {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.8/css/dataTables.bootstrap.min.css') }}
-        {{-- {{ HTML::style('https://cdn.datatables.net/select/1.0.0/css/select.bootstrap.min.css') }} --}}
+        {{ HTML::style('plugins/jquery-confirm/css/jquery-confirm.css') }}
 
         {{ HTML::style('css/style.css') }}
         
@@ -80,7 +80,7 @@
                                 28549<br><span>Bài viết</span>
                             </div>
                         </div> <!-- /stat -->
-                        {{-- <button class="btn btn-green"><i class="fa fa-refresh"></i> Update</button> --}}
+                        <button class="btn btn-green"><i class="fa fa-refresh"></i> Update</button>
                     </div> <!-- /stats -->
 
                 </div> <!-- /header -->
@@ -111,15 +111,15 @@
     {{-- {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/excanvas.min.js') }} --}}
     {{-- {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js') }} --}}
     {{-- {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js') }} --}}
-    {{-- {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js') }} --}}
+    {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js') }}
     {{-- {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/jquery-hashchange/v1.3/jquery.ba-hashchange.min.js') }} --}}
     {{-- {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js') }} --}}
     {{-- {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js') }} --}}
-    {{-- {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.js') }} --}}
+    {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.js') }}
 
     {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.8/js/jquery.dataTables.min.js') }}
     {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.8/js/dataTables.bootstrap.min.js') }}
-    {{-- {{ HTML::script('https://cdn.datatables.net/select/1.0.0/js/dataTables.select.min.js') }} --}}
+    {{ HTML::script('plugins/jquery-confirm/js/jquery-confirm.js') }}
     
     <!-- Google Map API -->
     {{ HTML::script('http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAgrj58PbXr2YriiRDqbnL1RSqrCjdkglBijPNIIYrqkVvD1R4QxRl47Yh2D_0C1l5KXQJGrbkSDvXFA') }}
@@ -154,6 +154,45 @@
     <script type="text/javascript">
         $(window).load(function(){
             $('#loading').fadeOut(1000);
+
+            toastr.options = {
+              "closeButton": true,
+              "debug": false,
+              "positionClass": "toast-bottom-right",
+              "onclick": null,
+              "showDuration": "300",
+              "hideDuration": "1000",
+              "timeOut": "5000",
+              "extendedTimeOut": "1000",
+              "showEasing": "swing",
+              "hideEasing": "linear",
+              "showMethod": "fadeIn",
+              "hideMethod": "fadeOut"
+            }
+
+            // -------------------------- SPARKLINE miniCHARTS -----------------------------//
+
+            $("#stats_visits").sparkline('html',{
+                type: 'pie',
+                sliceColors: ['#499ac7','transparent'],
+                offset:-90,
+                tooltipClassname:'tooltip-sp',
+                disableHighlight:true
+            });
+            $("#stats_users").sparkline('html',{
+                type: 'pie',
+                sliceColors: ['#37343b','transparent'],
+                offset:-90,
+                tooltipClassname:'tooltip-sp',
+                disableHighlight:true 
+            });
+            $("#stats_orders").sparkline('html',{
+                type: 'pie',
+                sliceColors: ['#83a854','transparent'],
+                offset:-90,
+                tooltipClassname:'tooltip-sp',
+                disableHighlight:true
+            });
         }) // Ready.
     </script>
 

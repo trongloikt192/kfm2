@@ -5,8 +5,17 @@
 @stop
 
 @section('content-header')
-<div class="row">
-    <div class="col-md-8">
+{{-- <div class="row">
+    
+
+    <div class="col-md-4">
+        <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" /><img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
+    </div>
+</div> --}}
+@stop
+
+@section('content')
+        {{-- height: 258px --}}
         <div class="carousel slide" id="carousel-304998">
             <ol class="carousel-indicators">
                 <li class="active" data-slide-to="0" data-target="#carousel-304998">
@@ -52,15 +61,8 @@
                 </div>
             </div> <a class="left carousel-control" href="#carousel-304998" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-304998" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
-    </div>
 
-    <div class="col-md-4">
-        <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" /><img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
-    </div>
-</div>
-@stop
 
-@section('content')
 	<div class="page-header">
         <h1>
             Tin Tức! <small>Interface Builder for Bootstrap</small>

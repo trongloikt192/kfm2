@@ -2,6 +2,11 @@
 
 class LinksController extends \BaseController {
 
+	public function __construct()
+    {
+        // Check Auth trước khi thực thi các hàm phía dưới, except là ngoại trừ 
+        // $this->beforeFilter('auth', ['except' => ['index', 'show', 'edit']]);
+    }
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -10,9 +15,8 @@ class LinksController extends \BaseController {
 	public function index()
 	{
 		//
-		// $links = Link::all();
-        return View::make('admincp.b10');
-        // return View::make('admincp.b10', compact('links'));
+		$links = Link::all();
+        return View::make('admincp.b10', compact('links'));
 	}
 
 
@@ -34,7 +38,18 @@ class LinksController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$data = Input::all();
+
+		if(Request::ajax()) {
+	        $validator = Validator::make($data, Link::$rules);
+	        if ($validator->fails())
+	        {
+	            return Response::json($validator->messages(), 500);
+	        }
+	        $link = Link::create(['name'=>$data['name'], 'link'=>$data['link'], 'description'=>$data['description']]);
+	        
+	        return 1;
+	    }
 	}
 
 
@@ -46,7 +61,7 @@ class LinksController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		
 	}
 
 
@@ -58,7 +73,9 @@ class LinksController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$id = Input::get('id');
+        $link = Link::find($id);
+        return Response::json($link);
 	}
 
 
@@ -70,7 +87,21 @@ class LinksController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$data = Input::all();
+
+		if(Request::ajax()) {
+	        $validator = Validator::make($data, Link::$rules);
+	        if ($validator->fails())
+	        {
+	            return Response::json($validator->messages(), 500);
+	        }
+
+			$id = $data['id'];
+	        $link = Link::findOrFail($id);
+	        
+	        $link->update(['name'=>$data['name'], 'link'=>$data['link'], 'description'=>$data['description']]);
+	        return 1;
+	    }
 	}
 
 
@@ -82,7 +113,9 @@ class LinksController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$id = Input::get('id');
+		Link::destroy($id);
+		return 1;
 	}
 
 

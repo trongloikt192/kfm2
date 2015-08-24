@@ -11,6 +11,9 @@
 |
 */
 
+// Filter every POST, PUT, DELETE request for the CSRF token (Pattern based Filter)
+// Route::when('*', 'csrf', ['post', 'put', 'delete']);
+
 Route::get('/f01', function()
 {
 	return View::make('f01');
@@ -93,19 +96,6 @@ Route::group(['prefix' => 'admincp'], function () {
 	Route::get('b11', function()
 	{
 		return View::make('admincp.b11');
-	});
-
-	
-
-	// Api
-	Route::group(['prefix' => 'api'], function () {
-
-		Route::get('b1001', function()
-		{
-			return View::make('admincp.b11');
-		});
-
-		// Route::resource('b10', 'LinksController');
 	});
 });
 
