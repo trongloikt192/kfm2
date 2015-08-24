@@ -71,16 +71,34 @@
 <div class="panel panel-primary">
 	<div class="panel-heading">
 		<h3 class="panel-title">
-			Liên kết
+			Các câu hỏi thường gặp
 		</h3>
 	</div>
 	<div class="panel-body">
-		<select class="form-control input-sm">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
+		<div class="media">
+		  	<div class="media-left">
+		    	<a href="#">
+		      		<img class="media-object" src="http://lorempixel.com/90/70/" alt="...">
+		    	</a>
+		  	</div>
+		  	<div class="media-body">
+		    	<h4 class="media-heading">Media heading</h4>
+		    	Công ty A&C nhận bằng khen của Liên đoàn lao động Quận Tân Bình
+		  	</div>
+		</div>
+		<hr>
+
+		<div class="media">
+		  	<div class="media-left">
+		    	<a href="#">
+		      		<img class="media-object" src="http://lorempixel.com/90/70/" alt="...">
+		    	</a>
+		  	</div>
+		  	<div class="media-body">
+		    	<h4 class="media-heading">Media heading</h4>
+		    	Công ty A&C nhận bằng khen của Liên đoàn lao động Quận Tân Bình
+		  	</div>
+		</div>
+		<hr>
 	</div>
 </div>

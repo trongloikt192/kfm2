@@ -25,7 +25,7 @@
         {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.8/css/dataTables.bootstrap.min.css') }}
         {{ HTML::style('plugins/jquery-confirm/css/jquery-confirm.css') }}
 
-        {{ HTML::style('css/style.css') }}
+        {{ HTML::style('css/admincp/style.css') }}
         
         @yield('styles')
     </head>

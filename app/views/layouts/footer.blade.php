@@ -3,7 +3,7 @@
 		<p>Khách hàng</p>
 		<!-- Jssor Slider Begin -->
 	    <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
-	    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 809px; height: 100px; overflow: hidden;">
+	    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 803px; height: 100px; overflow: hidden;">
 
 	        <!-- Loading Screen -->
 	        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -16,7 +16,7 @@
 	        </div>
 
 	        <!-- Slides Container -->
-	        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 809px; height: 100px; overflow: hidden;">
+	        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 803px; height: 100px; overflow: hidden;">
 	            <div><img u="image" src="img/ancient-lady/005.jpg" /></div>
 	            <div><img u="image" src="img/ancient-lady/006.jpg" /></div>
 	            <div><img u="image" src="img/ancient-lady/011.jpg" /></div>
@@ -121,6 +121,7 @@
 	    </div>
 	    <!-- Jssor Slider End -->
 	</div>
+
 	<div class="col-md-3">
 		<div>
 			Trang chủ | Giới thiệu | Liên hệ
@@ -128,6 +129,6 @@
 		<address>
 			 <strong>Twitter, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890
 		</address>
-		Copyright © 2013 A&C. All rights reserved
+		Copyright © 2013 KMF
 	</div>
 </div>
