@@ -138,12 +138,22 @@
 @section('scripts')
     <script type="text/javascript">
 
+        var dataTable;
         var form_a_item = $('#form_a_item');
         var form_e_item = $('#form_e_item');
         var btnEdit_item = $('.btnEdit_item');
         var btnDel_item = $('.btnDel_item');
         var modal_a_item = $('#modal_a_item');
         var modal_e_item = $('#modal_e_item');
+
+        function installTable() {
+            // Data Tables
+            if( $.fn.dataTable ) {
+                dataTable = $("#datatable").dataTable({
+                    sPaginationType: "full_numbers",
+                });
+            }
+        }
 
         function xhrGetOM_detail_item() {
             btnEdit_item.click(function(e) {
@@ -182,10 +192,9 @@
                         btnEdit_item.prop('disabled', false);
 
                         if(isSuccess) {
-                            console.log('ok');
                             modal_e_item.modal("show");
                         } else {
-                            console.log('error');
+                            toastr.error( "Error" , "Notifications" );
                         }
                     }
                 }); 
@@ -258,6 +267,7 @@
                                 if(isSuccess) {
                                     toastr.success( "Success" , "Notifications" );
                                     modal_e_item.modal('hide');
+                                    xhrRefresh();
                                 } else {
                                     toastr.error( "Error" , "Notifications" );
                                 }
@@ -335,6 +345,7 @@
                                 if(isSuccess) {
                                     toastr.success( "Success" , "Notifications" );
                                     modal_e_item.modal('hide');
+                                    xhrRefresh();
                                 } else {
                                     toastr.error( "Error" , "Notifications" );
                                 }
@@ -387,6 +398,13 @@
                                 loading.hide();
                                 done.show();
                                 btnDel.prop('disabled', false); //enable button
+
+                                if(isSuccess) {
+                                    toastr.success( "Success" , "Notifications" );
+                                    xhrRefresh();
+                                } else {
+                                    toastr.error( "Error" , "Notifications" );
+                                }
                             }
                         }); 
                     }
@@ -409,8 +427,14 @@
             });
         }
 
+        function xhrRefresh() {
+            setTimeout(function() {
+                window.location.reload();
+            }, 1000);
+        }
 
         $(document).ready(function() {
+            installTable();
             GetOM();
             xhrGetOM_detail_item();
             xhrInsert_item();

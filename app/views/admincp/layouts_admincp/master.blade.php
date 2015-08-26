@@ -197,31 +197,7 @@
     </script>
 
     <script type="text/javascript">
-        var table;
-
-        ;(function( $, window, document, undefined ) {
-
-            $(document).ready(function() {
-
-                // Data Tables
-                if( $.fn.dataTable ) {
-                    table = $("#datatable").dataTable({
-                        sPaginationType: "full_numbers"
-                    });
-
-                    $('#datatable tbody').on( 'click', 'tr', function () {
-                        if ( $(this).hasClass('selected') ) {
-                            $(this).removeClass('selected');
-                        }
-                        else {
-                            table.$('tr.selected').removeClass('selected');
-                            $(this).addClass('selected');
-                        }
-                    });
-                }
-            });
-
-        }) (jQuery, window, document);
+    
     </script>
 
     @yield('scripts')

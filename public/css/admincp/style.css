@@ -2399,7 +2399,7 @@ a [class^="fa-"], a [class*=" fa-"] {
 
 /*//////////////////////////////////////////// ME ///////////////////////////////// */
 #datatable tbody tr:hover {
-	cursor: pointer;
+	/*cursor: pointer;*/
 	background-color: #59ABC3;
 	color: #ffffff
 }
