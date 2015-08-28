@@ -1,13 +1,8 @@
 @extends('...layouts.master-withoutsidebar')
 
-@section('header-title')
+@section('title')
     Trang Liên hệ
 @stop
-
-@section('content-header')
-    @include('layouts/content-header')
-@stop
-
 
 @section('content')
 	<div class="row">

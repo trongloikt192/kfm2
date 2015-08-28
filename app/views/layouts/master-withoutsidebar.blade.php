@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>KFM - @yield('header-title')</title>
+    <title>KFM - @yield('title')</title>
 
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
 
     {{ HTML::style('//bootswatch.com/simplex/bootstrap.min.css') }}
     {{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') }}
-
+    {{ HTML::style('css/style.css') }}
     
-    @yield('header-js')
+    @yield('styles')
   </head>
 <body>
     <div class="container">
@@ -60,7 +60,7 @@
     {{ HTML::script('js/jssor.slider.js') }}
     {{ HTML::script('js/scripts.js') }}
 
-    @yield('footer-js')
+    @yield('scripts')
 
     <script>
     jQuery(document).ready(function ($) {

@@ -7,8 +7,8 @@
 
     <title>KFM - @yield('header-title')</title>
 
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
+    <meta name="description" content="Website kiem toan & tu van">
+    <meta name="author" content="KFM!">
 
     {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/simplex/bootstrap.min.css') }}
     {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css') }}
